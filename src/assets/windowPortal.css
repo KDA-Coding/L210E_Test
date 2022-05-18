@@ -1,0 +1,138 @@
+.header {
+    width: 650px;
+
+    margin-bottom: 57%;
+    height: 35px;
+    background-color: rgb(73 73 73);
+    display: flex;
+    position: absolute;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .boxed {
+    display: flex;
+    background-color: rgb(255 255 255);
+    height: 420px;
+    width: 650px;
+
+  }
+  .aboveBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* flex-wrap: nowrap; */
+    justify-content: flex-end;
+    align-content: center;
+    margin-top: 2%;
+    width: 650px;
+    /*margin-left:9%; */
+  }
+ 
+  span {
+    font-weight: bold;
+  }
+ 
+  .buttonProgress {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+  }
+  .buttonIandE {
+    display: flex;
+  }
+  .baseExit {
+    display: flex;
+    align-items: center;
+  }
+  .baseIndex {
+    display: flex;
+    align-items: center;
+  }
+  .iconName {
+    margin-left: 5%;
+  }
+  .boxedContained {
+    display: flex;
+    align-items: center;
+    
+  }
+  .contentBox {
+    display: flex;
+    margin-top:5%;
+  }
+  .leftButton {
+    width: 50px;
+    height: 50px;
+    margin: -14%;
+    font-size:25px;
+  }
+  .rightButton {
+    width: 50px;
+    height: 50px;
+    margin: 14%;
+    font-size:25px
+  }
+  .indexModule {
+    display: flex;
+    flex-direction: column;
+    height: 401px;
+    overflow: scroll;
+    
+    background-color: rgb(20 48 56);
+    margin-right: 42%;
+    /* border-radius: 10px; */
+    overflow: hidden;
+
+    position: relative;
+    margin-top: -50%;
+    width: 40%;
+    text-decoration: none;
+  }
+  .indexTitles {
+    list-style: none;
+    padding-left: 5%;
+  }
+  /* .indexClose {
+    padding: 1%;
+  }
+  .indexBottom{
+      padding: 1%;
+  } */
+  .titleContain {
+    height: 350px;
+    overflow: scroll;
+    width: 93%;
+
+    margin-left: 3%;
+    background: linear-gradient(45deg, transparent 10px, rgb(100 109 116) 0) bottom left;
+  }
+  .indexHeader {
+    padding: 1%;
+    margin: 1%;
+    margin-left: 3%;
+    background-color: rgb(25 156 207);
+    padding-left: 2%;
+    margin-bottom: 2%;
+    width: 93%;
+    margin-top: 2%;
+  }
+  .backdrop {
+    background-color: rgba(0, 0, 0, 0.13);
+    width: 800px;
+    height: 600px;
+    position: absolute;
+  }
+  .slideTitle:hover {
+    color: rgb(254 213 68);
+    cursor: pointer; 
+  }
+  .slideTitle:active {
+    color: rgb(221, 186, 59);
+  }
+  .backBHidden{
+    visibility: hidden;
+  }
+  .forwardBHidden{
+    visibility: hidden;
+  }
+

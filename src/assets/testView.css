@@ -1,0 +1,82 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image {
+    display: flex;
+    height: 100px;
+    margin: 5%;
+    margin-top: 6%;
+    margin-left: 0%;
+    position: relative;
+  }
+  .window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .header {
+    margin-right: 1%;
+    font-weight: bold;
+  }
+  .panelTitle {
+    width: 475px;
+    /*margin: -9% 1% 1% 1%; */
+    font-weight: bold;
+    color: rgb(248 79 36);
+    margin: 1%;
+  }
+  .panelText {
+    color: rgb(0 0 0);
+    margin: 3%;
+  }
+  .FBPA {
+    font-size: 10px;
+  }
+  .GFEB {
+    font-size: 15px;
+  }
+  .question {
+    margin: 1%;
+  
+    padding: 1%;
+    display: flex;
+    /* DISPLAY: FLEX; */
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .questionLabel {
+    margin-left: 1%;
+  }
+  
+  .baseTermTitle {
+    color: rgb(176 215 166);
+    font-weight: bold;
+  }
+  .slotContain {
+    display: flex;
+    flex-direction: column;
+    color: rgb(255 255 255);
+    padding: 1%;
+    width: 55%;
+    position: absolute;
+    margin-top: -17%;
+    background-color: rgb(14 52 61);
+  }
+  
+  .baseTerm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top:5%;
+  }
+  .text{
+    display:flex;
+  }
+  
+  .contain{
+    width:100%;
+  }
+  
