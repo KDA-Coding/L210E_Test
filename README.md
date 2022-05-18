@@ -9,11 +9,9 @@ use this template to update the legacy GFEBS courses
 # Adding the home page data 
 - Add the header (H1) and note (H2, the yellow text under the header) for the main assessment in the /src/components/views/homeHeaderView.vue file
 - Add the header and note (the yellow text under the header) for the main assessment in the /src/components/layouts/WindowPortalHeader.vue file
-- Change the text in /src/components/views/HomeView.vue to the  current assessment text ( this the text underneath the crest) 
+- Change the text in /src/components/views/HomeView.vue to the current assessment text ( this the text underneath the crest) 
 - You can change the html to fit the text to your needs
-- To add the main buttons navigate to /src/components/store/homeButtons/index.js
-you can add the title of the button and the link to the module there
-(make sure you add the link from the store index file to the router file /src/components/router/index.js)
+- To add the main buttons navigate to /src/components/store/homeButtons/index.js . You can add the title of the button and the link to the module there. (make sure you add the link from the store index file to the router file /src/components/router/index.js)
 # Creating the Module
 - Create a new view file in the views folder and name it the module name and view (moduleNameView.vue) **look at testView.vue for layout example**
 - in /src/components/rotuer/index.js import the newly created vue file and add it as a component in the routes array 
