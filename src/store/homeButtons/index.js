@@ -5,7 +5,7 @@ export default {
     return {
       buttons: [
         {
-          title: "Sample Button to Test View",
+          title: "Test View",
           link: "/components/views/testView",
         },
       ],
