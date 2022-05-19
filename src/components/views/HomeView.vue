@@ -4,15 +4,15 @@
   </div>
   <div>
     <div class="homeTitle">
-      <h1></h1>
-      <h2></h2>
+      <h1>Sample Title</h1>
+      <h2>Sample Subtitle</h2>
     </div>
     <div class="homeImage">
       <img src="../../../img/shield-01.png" alt="shield.png" />
     </div>
     <div class="homeParagraph">
       <span>
-        After completing this course, review all the modules and test for the <br />
+        Sample Test Name Here <br />
         GFEBS Financials Process Overview Post Assessment.
       </span>
       <span class="homeNote">

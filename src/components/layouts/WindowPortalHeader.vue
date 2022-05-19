@@ -4,9 +4,9 @@
       <img src="../../../img/shield-01.png" alt="shield.png" />
     </div>
     <div >
-      <span class="text"> </span>
+      <span class="text">Main Assessment Title</span>
       <br />
-      <span class="note"> </span>
+      <span class="note">Main Assessment Note</span>
     </div>
     <div> </div>
   </div>
