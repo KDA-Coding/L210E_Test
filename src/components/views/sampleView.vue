@@ -19,22 +19,61 @@
                     </div>
                 </div>
         </Slide>
-        <Slide slideId="1" name="Question Slide">
-            <h2 class="panelTitle">Question Slide</h2>
+        <Slide slideId="1" name="Term Slide">
+            <h2 class="panelTitle">Term Slide</h2>
                 <div class="wrapper">
                     <div class="text">
                         <p class="panelText">
-                            Is this a rhetorical question?
-                            <BaseQuestion :value="true" :id="'q35'" :labelName="'Yes'" :name="'q4'" />
-                            <BaseQuestion :value="false" :id="'q36'" :labelName="'No'" :name="'q4'" />
-                            <BaseQuestion :value="false" :id="'q37'" :labelName="'Maybe'" :name="'q4'" />
-                            <BaseQuestion :value="false" :id="'q38'" :labelName="'What?'" :name="'q4'" />
+                            These are some sample Terms <br>
+                            <span class="bold">Click</span> each term below to read its definition
+                            <div class="baseTerm">
+                                <BaseTermButton :id="1" name="Sample"/>
+                                <BaseTermButton :id="2" name="Another Sample"/>
+                            </div>
+                            <div class="termContain">
+                                <SlideContainer v-model:activeSlideId="this.$store.getters.getActiveTermId">
+                                    <Slide slideId="1">
+                                        <div class="slotContain">
+                                            <span class="baseTermTitle">Sample</span>
+                                            <br>
+                                            <p>
+                                                This is a sample definition.
+                                            </p>
+                                        </div>
+                                    </Slide>
+                                    <Slide slideId="2">
+                                        <div class="slotContain">
+                                            <span class="baseTermTitle">Another Sample</span>
+                                            <br>
+                                            <p>
+                                                This is a another sample definition.
+                                            </p>
+                                        </div>
+                                    </Slide>
+                                </SlideContainer>
+                            </div>
                         </p>
                     </div>
                 </div>
         </Slide>
-        <Slide> 
-
+        <Slide slideId="2" name="Question Slide">
+            <h2 class="panelTitle">Question Slide</h2>
+                <div class="wrapper">
+                    <div class="text">
+                        <div>
+                            <p class="panelText">
+                                Is this a rhetorical question?
+                                <BaseQuestion :value="true" :id="'q35'" :labelName="'Yes'" :name="'q4'" />
+                                <BaseQuestion :value="false" :id="'q36'" :labelName="'No'" :name="'q4'" />
+                                <BaseQuestion :value="false" :id="'q37'" :labelName="'Maybe'" :name="'q4'" />
+                                <BaseQuestion :value="false" :id="'q38'" :labelName="'What?'" :name="'q4'" />
+                            </p>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <BaseQuestionImage />
+                    </div>
+                </div>
         </Slide>
     </SlideContainer>
 </WindowPortal>

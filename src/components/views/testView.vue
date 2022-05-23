@@ -64,7 +64,6 @@
             <h2 class="panelTitle">Question 3</h2>
             <div class="wrapper">
                 <div class="text">
-                
                 <div>
                     <p class="panelText">
                     GFEBS enables efficient and accurate financial management of the Army by:
