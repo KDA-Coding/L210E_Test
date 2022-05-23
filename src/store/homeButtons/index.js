@@ -8,6 +8,10 @@ export default {
           title: "Test View",
           link: "/components/views/testView",
         },
+        {
+          title: "Sample View",
+          link: "/components/views/sampleView",
+        }
       ],
     };
   },

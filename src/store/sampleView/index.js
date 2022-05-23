@@ -4,7 +4,7 @@ export default {
         return {
             titleCount: 1,
             slideNames: [
-                "This is a Test",
+                "Slide 1",
 
             ] 
         }

@@ -49,7 +49,7 @@
     <div>
       <div class="titleContain">
         <ul class="indexTitles">
-          <li v-for="number in titleCount" class="slideTitle" @click="setSlide(titles[0][number - 1])">
+          <li v-for="number in titleCount" :key="number" class="slideTitle" @click="setSlide(titles[0][number - 1])">
             {{ titles[0][number - 1] }}
           </li>
         </ul>
@@ -125,20 +125,23 @@ import WindowPortalHeader from "./WindowPortalHeader.vue";
       },
       // this opens the index menu
       openIndexModule() {
-        store.dispatch("openCurrentIndex");
+        if(this.flip == true){
+          this.flip = false;
+          return;
+        }
         this.$store.getters.getCurrentSelectedHomeButton;
-        this.flip = this.$store.getters.getShowSlide;
+        this.flip = true;
         this.openIndexTitles();
       },
       //this gets the index titles from the store of current module
       openIndexTitles() {
         this.titles = this.$store.getters.getIndexTitles;
-        this.titleCount = this.$store.getters.getTitleCount;
+        this.titleCount = this.$store.getters.getTotalNumberOfSlides;
       },
       //closes index
       closeIndexModule() {
         store.dispatch("closeCurrentIndex");
-        this.flip = this.$store.getters.getShowSlide;
+        this.flip = false;
          store.dispatch("setQuestionAnswered", true)
         store.dispatch("setIsQuestionCorrect", 'unAnswered')
       },

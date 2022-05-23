@@ -56,9 +56,11 @@ const store = createStore({
       // on open we set the array back to 0
       state.currentIndexTitles = [];
       //since the button opens a new window we use localstorage to find the current pressed button
-       if (window.localStorage.getItem("name") == "Test View") {
+      console.log(window.localStorage.getItem("name"));
+       if (window.localStorage.getItem("name") === "Test View") {
         //set the currentindex title to the correct slide
          state.currentIndexTitles.push(state.exampleStore.slideNames);
+         console.log(state.currentIndexTitles)
          state.totalNumberOfSlides = state.currentIndexTitles[0].length;
          return;
         }
