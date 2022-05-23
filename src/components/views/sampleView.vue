@@ -1,16 +1,17 @@
 <template>
-<Home-Header/>
-<Window-Portal>
+<HomeHeader/>
+<WindowPortal>
     <template v-slot:header>
-        <div class="header">This is the Sample View - Kirk Allgeyer</div>
+        <div class="header">Sample View for Testing - Kirk Allgeyer</div>
     </template>
-    <Slide-Container v-model:activeSlideId="this.$store.getters.getIndexSlideSelected">
-        <Slide slideId="0" name="Slide 1">
-            <h2 class="panelTitle">Slide 1</h2>
+    <SlideContainer v-model:activeSlideId="this.$store.getters.getIndexSlideSelected">
+        <Slide slideId="0" name="General Slide">
+            <h2 class="panelTitle">General Slide</h2>
                 <div class="wrapper">
                     <div class="text">
                         <p class="panelText">
-
+                            This is some Sample Text for this slide <br>
+                            With a break between text
                         </p>
                     </div>
                     <div class="image">
@@ -18,9 +19,25 @@
                     </div>
                 </div>
         </Slide>
+        <Slide slideId="1" name="Question Slide">
+            <h2 class="panelTitle">Question Slide</h2>
+                <div class="wrapper">
+                    <div class="text">
+                        <p class="panelText">
+                            Is this a rhetorical question?
+                            <BaseQuestion :value="true" :id="'q35'" :labelName="'Yes'" :name="'q4'" />
+                            <BaseQuestion :value="false" :id="'q36'" :labelName="'No'" :name="'q4'" />
+                            <BaseQuestion :value="false" :id="'q37'" :labelName="'Maybe'" :name="'q4'" />
+                            <BaseQuestion :value="false" :id="'q38'" :labelName="'What?'" :name="'q4'" />
+                        </p>
+                    </div>
+                </div>
+        </Slide>
+        <Slide> 
 
-    </Slide-Container>
-</Window-Portal>
+        </Slide>
+    </SlideContainer>
+</WindowPortal>
 </template>
 
 <script>
@@ -57,7 +74,7 @@ export default {
     data() {
         return {
 
-            activeSlideId: this.$store.getters.getIndexSlideSelected.ToString(),
+            activeSlideId: this.$store.getters.getIndexSlideSelected.ToString,
             activeTermId: this.$store.getters.getActiveTermId
         }
     }

@@ -6,7 +6,8 @@
 import { createStore } from "vuex";
 //Importing the Home button store modules here
 import HomeButtonModule from "./homeButtons/index.js";
-import exampleStoreModule from "./exampleStore/index"
+import exampleStoreModule from "./exampleStore/index.js";
+import sampleStoreModule from "./sampleView/index.js"
 // Create a new store instance.
 const store = createStore({
   state() {
@@ -32,7 +33,8 @@ const store = createStore({
   //declared home buttons here
   modules: {
     homeButtonGroup: HomeButtonModule,
-    exampleStore : exampleStoreModule
+    exampleStore : exampleStoreModule,
+    sampleStore : sampleStoreModule
     
   },
   mutations: {
@@ -57,14 +59,20 @@ const store = createStore({
       state.currentIndexTitles = [];
       //since the button opens a new window we use localstorage to find the current pressed button
       console.log(window.localStorage.getItem("name"));
-       if (window.localStorage.getItem("name") === "Test View") {
-        //set the currentindex title to the correct slide
-         state.currentIndexTitles.push(state.exampleStore.slideNames);
-         console.log(state.currentIndexTitles)
-         state.totalNumberOfSlides = state.currentIndexTitles[0].length;
-         return;
+        if (window.localStorage.getItem("name") === "Test View") {
+          //set the currentindex title to the correct slide
+          state.currentIndexTitles.push(state.exampleStore.slideNames);
+          console.log(state.currentIndexTitles)
+          state.totalNumberOfSlides = state.currentIndexTitles[0].length;
+          return;
         }
-
+        else if (window.localStorage.getItem("name") === "Sample View") {
+          //set the currentIndex title to the correct slide
+          state.currentIndexTitles.push(state.sampleStore.slideNames);
+          console.log(state.currentIndexTitles)
+          state.totalNumberOfSlides = state.currentIndexTitles[0].length;
+          return;
+        }
     },
     closeCurrentIndex(state) {
       state.showSlideIndex = !state.showSlideIndex;

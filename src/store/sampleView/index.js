@@ -2,9 +2,10 @@ export default {
     nameSpaced: true,
     state() {
         return {
-            titleCount: 1,
+            titleCount: 2,
             slideNames: [
-                "Slide 1",
+                "General Slide",
+                "Question Slide"
 
             ] 
         }
