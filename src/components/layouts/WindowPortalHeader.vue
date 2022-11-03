@@ -1,7 +1,7 @@
 <template>
   <div class="aboveContain">
     <div class="portalImg">
-      <img src="../../../img/shield-01.png" alt="shield.png" />
+      <img src="../../../public/img/shield-01.png" alt="shield.png" />
     </div>
     <div >
       <span class="text">Main Assessment Title</span>

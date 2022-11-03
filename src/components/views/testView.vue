@@ -13,7 +13,7 @@
                     </p>
                 </div>
                 <div class="image">
-                    <img src="../../../../../img/GFEBS.jpeg" name="GFEBS" />
+                    <img src="../../../public/img/GFEBS.jpeg" name="GFEBS" />
                 </div>
             </div>
         </Slide>

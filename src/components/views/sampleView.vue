@@ -15,7 +15,7 @@
                         </p>
                     </div>
                     <div class="image">
-                        <img src="../../../../../img/GFEBS.jpeg" />
+                        <img src="../../../public/img/GFEBS.jpeg" />
                     </div>
                 </div>
         </Slide>
