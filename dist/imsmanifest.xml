@@ -1,0 +1,23 @@
+<manifest>
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>2004 3rd Edition</schemaversion> 
+        <adlcp:location>metadata_course.xml</adlcp:location>
+    </metadata>
+
+    <organizations default="CCC">
+        <organization identifier="CCC" adlseq:objectivesGlobalToSystem="false">
+            <title>Course Title</title>
+            <item identifier="CCCM01" identifierref="CCCM01_resources">
+                <title>Course Title</title>
+            </item>
+        </organization>
+    </organizations>
+
+    <resources>
+        <resource>
+            <file></file>
+        </resource>
+    </resources>
+        
+</manifest>

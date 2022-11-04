@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lomStrict.xsd">
+    <general>
+        <identifier>
+            <catalog>ATIA</catalog>
+            <entry>TBD</entry>
+        </identifier>
+        <title>
+            <string><!-- COURSE TITLE HERE--></string>
+        </title>
+        <language><!-- LANGUAGE--></language>
+        <description>
+            <string><!-- BASIC DESCRIPTION HERE--></string>
+        </description>
+        <!-- KEYWORDS HERE-->
+        <keyword><string>Keyword_1</string></keyword>
+        <keyword><string>Keyword_2</string></keyword>
+        <keyword><string>Keyword_3</string></keyword>
+        <aggregationLevel>
+            <source>LOMv1.0</source>
+            <value><!-- 2 is SCO and 3 is Organization--></value>
+        </aggregationLevel>
+    </general>
+    <lifeCycle>
+        <version>
+            <!-- Version of the Course-->
+            <string>1.0</string>
+        </version>
+        <status>
+            <source>LOMv1.0</source>
+            <!-- Always final for delivery-->
+            <value>final</value>
+        </status>
+        <contribute>
+            <source>LOMv1.0</source>
+            <value>publisher</value>
+            <entity>
+                <!-- VCARD Format (tools.ief.org/html/rfc6350) -->
+            </entity>
+            <date>
+                <datetime><!-- DATE OF APPROVED SUBMISSION --></datetime>
+            </date>
+        </contribute>
+    </lifeCycle>
+    <metaMetadata>
+        <identifier>
+            <catalog>TBD</catalog>
+            <entry>TBD</entry>
+        </identifier>
+        <metadataSchema>LOMv1.0</metadataSchema>
+        <metadataSchema>SCORM_CAM_v1.3</metadataSchema>
+        <metadataSchema>ADLv1.0</metadataSchema>
+        <language><!-- Language Code--></language>       
+    </metaMetadata>
+    <technical>
+        <!-- Each format Type Requires a subtag-->
+        <format>text/html</format>
+        <format>image/jpeg</format>
+        <format>video/mp4</format>
+        <rights>
+            <cost>
+                <source>LOMv1.0</source>
+                
+            </cost>
+        </rights>
+    </technical>
+    <rights>...</rights>
+    <classification>...</classification>
+    <classification>...</classification>
+    <classification>...</classification>
+    <classification>...</classification>
+    <classification>...</classification>
+</lom>
