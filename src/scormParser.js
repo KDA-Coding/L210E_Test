@@ -1,9 +1,12 @@
-const scorm = require('../scorm.json');
+const scorm = require('../public/scripts/scorm.json');
 const fs = require('fs');
 let identifier = scorm.general.course_title.split(" ").map((n)=>n[0]).join("");
 
+/**
+ * A function that generates Army SCORM compliant manifest and metadata files
+ */
 function generateManifest() {
-    let path = './imsmanifest.xml';
+    let path = './dist/imsmanifest.xml';
     let mfData = '<manifest>\n' + generateMetadata() +'\n' + generateOrganizations() + '\n' + generateResources() + '\n</manifest>';
     fs.writeFile(path, mfData, function (err) {
         if (err) throw err;
@@ -12,9 +15,11 @@ function generateManifest() {
     console.log(mfData);
 }
 
+generateManifest();
+
 function generateMetadata() {
     let path = scorm.general.course_code + '_course.xml';
-    fs.writeFile('./'+ path, generateCourseMetadata(), function (err) {
+    fs.writeFile('./dist/' + path, generateCourseMetadata(), function (err) {
         if (err) throw err;
         console.log(err);
       });
@@ -25,7 +30,7 @@ function generateMetadata() {
 
 function generateCourseMetadata() {
     let rights = '<rights>\n\t<cost>\n\t\t<source>LOMv1.0</source>\n\t\t<value>no</value>\n\t</cost>\n\t<copyrightAndOtherRestrictions>\n\t\t<source>LOMv1.0</source>\n\t\t<value>no</value>/n/t</copyrightAndOtherRestrictions>/n</rights>'
-    let metadata = '<?xml version="1.0"?>\n<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lomStrict.xsd"\n' + generateGeneral() + '\n' + generateLifecycle() + '\n' + generateMetaMetadata() + '\n' + generateTechnical() + '\n' + rights + '\n' + generateClassifications() + '\n</lom>';
+    let metadata = '<?xml version="1.0"?>\n<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lomStrict.xsd">\n' + generateGeneral() + '\n' + generateLifecycle() + '\n' + generateMetaMetadata() + '\n' + generateTechnical() + '\n' + rights + '\n' + generateClassifications() + '\n</lom>';
 
     return metadata;
 }
@@ -89,7 +94,10 @@ function generateClassifications() {
 
 
 function generateOrganizations() {
-    let organizations = '<organizations default="'+identifier+'">\n\t<organization identifier="'+ identifier +'" adlseq:objectivesGlobalToSystem="false">\n\t\t<title>'+ scorm.general.course_title +'</title>\n\t\t<item identifier="'+scorm.general.course_code+identifier+'" identifierref="'+scorm.general.course_code+identifier+'_SCO">\n\t\t\t<title>'+scorm.general.course_code+': '+scorm.general.course_title+'</title>\n\t\t</item>\n\t</organization>\n</organizations>'
+    const objective = '<imsss:sequencing>\n\t\t\t\t<imsss:objectives>\n\t\t\t\t\t\t<imsss:primaryObjective satisfiedByMeasure="false" objectiveID="scoObj"></imsss:primaryObjective>\n\t\t\t\t</imsss:objectives>\n\t\t\t</imsss:sequencing>';
+    const sequencing = '<imsss:sequencing>\n\t<imsss:rollupRules>\n\t\t<imsss:rollupRule childActivitySet="all">\n\t\t\t<imsss:rollupConditions conditionCombination="all">\n\t\t\t\t<imsss:rollupCondition condition="satisfied"/>\n\t\t\t</imsss:rollupConditions>\n\t\t\t<imsss:rollupAction action="completed"/>\n\t\t</imsss:rollupRule>\n\t\t<imsss:rollupRule childActivitySet="all">\n\t\t\t<imsss:rollupConditions conditionCombination="all">\n\t\t\t\t<imsss:rollupCondition condition="satisfied"/>\n\t\t\t</imsss:rollupConditions>\n\t\t\t<imsss:rollupAction action="satisfied"/>\n\t\t</imsss:rollupRule>\n\t\t<imsss:rollupRule childActivitySet="any">\n\t\t\t<imsss:rollupConditions conditionCombination="any">\n\t\t\t\t<imsss:rollupCondition operator="not" condition="satisfied"/></imsss:rollupConditions>\n\t\t\t<imsss:rollupAction action="incomplete"/>\n\t\t</imsss:rollupRule>\n\t</imsss:rollupRules>\n</imsss:sequencing>';
+
+    let organizations = '<organizations default="'+identifier+'">\n\t<organization identifier="'+ identifier +'" adlseq:objectivesGlobalToSystem="false">\n\t\t<title>'+ scorm.general.course_title +'</title>\n\t\t<item identifier="'+scorm.general.course_code+identifier+'" identifierref="'+scorm.general.course_code+identifier+'_SCO">\n\t\t\t<title>'+scorm.general.course_code+': '+scorm.general.course_title+'</title>\n\t\t\t' + objective + '\n\t\t</item>\n'+ sequencing + '\n\t</organization>\n</organizations>';
 
     //console.log(organizations);
     return organizations;
