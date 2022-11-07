@@ -8,7 +8,7 @@
       <h2>Sample Subtitle</h2>
     </div>
     <div class="homeImage">
-      <img src="img/shield-01.png" alt="shield.png" />
+      <img src="../../../public/img/shield-01.png" alt="shield.png" />
     </div>
     <div class="homeParagraph">
       <span>

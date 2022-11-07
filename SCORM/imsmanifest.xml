@@ -1,0 +1,25 @@
+<manifest>
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>2004 3rd Edition</schemaversion> 
+        <adlcp:location><!-- Metadata File Name--> metadata_course.xml
+    </metadata>
+
+    <!-- default, identifer, course identifier, and identifierref should all derive from COURSE TITLE -->
+    
+    <organizations default="CT">
+        <organization identifier="CT" adlseq:objectivesGlobalToSystem="false">
+            <title><!-- Course Title--></title>
+            <item identifier="CT" identifierref="CT_SCO">
+                <title><!-- Course Title--></title>
+            </item>
+        </organization>
+    </organizations>
+
+    <resources>
+        <resource identifer="CT_SCO" adlcp:scormType="sco" href="index.html">
+            <file href="index.html"/>
+        </resource>
+    </resources>
+        
+</manifest>

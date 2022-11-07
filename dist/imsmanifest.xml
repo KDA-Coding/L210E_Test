@@ -1,23 +1,40 @@
 <manifest>
-    <metadata>
-        <schema>ADL SCORM</schema>
-        <schemaversion>2004 3rd Edition</schemaversion> 
-        <adlcp:location>metadata_course.xml</adlcp:location>
-    </metadata>
-
-    <organizations default="CCC">
-        <organization identifier="CCC" adlseq:objectivesGlobalToSystem="false">
-            <title>Course Title</title>
-            <item identifier="CCCM01" identifierref="CCCM01_resources">
-                <title>Course Title</title>
-            </item>
-        </organization>
-    </organizations>
-
-    <resources>
-        <resource>
-            <file></file>
-        </resource>
-    </resources>
-        
+<metadata>
+	<schema>ADL SCORM</schema>
+	<schemaversion>2004 3rd Edition</schemaversion>
+	<adlcp:location>L210E_course.xml</adlcp:location>
+</metadata>
+<organizations default="STC">
+	<organization identifier="STC" adlseq:objectivesGlobalToSystem="false">
+		<title>Sample Test Course</title>
+		<item identifier="L210ESTC" identifierref="L210ESTC_SCO">
+			<title>L210E: Sample Test Course</title>
+		</item>
+	</organization>
+</organizations>
+<resources>
+	<resource identifer="STC_SCO" adlcp:scormType="sco" href="index.html">
+		<file href="/assets/GFEBS.c24b5644.jpeg"/>
+		<file href="/assets/correct.86137e08.png"/>
+		<file href="/assets/incorrect.5534b3b3.png"/>
+		<file href="/assets/index.64c6261b.js"/>
+		<file href="/assets/index.d94d1087.css"/>
+		<file href="/assets/question-answer.0fa42602.png"/>
+		<file href="/assets/shield-01.c5aef8a3.png"/>
+		<file href="/img/Artboard 3.svg"/>
+		<file href="/img/GFEBS.jpeg"/>
+		<file href="/img/correct.png"/>
+		<file href="/img/downArrow.svg"/>
+		<file href="/img/general_summary.png"/>
+		<file href="/img/incorrect.png"/>
+		<file href="/img/learning-checkpoint.png"/>
+		<file href="/img/module_checkpoint.png"/>
+		<file href="/img/question-answer.png"/>
+		<file href="/img/shield-01.png"/>
+		<file href="/img/summary-01.png"/>
+		<file href="/img/target.png"/>
+		<file href="/img/upArrow.svg"/>
+		<file href="index.html"/>
+	</resource>
+</resources>
 </manifest>
