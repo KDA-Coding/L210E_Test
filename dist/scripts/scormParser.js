@@ -1,10 +1,9 @@
-const scorm = require('../public/scorm.json');
+const scorm = require('../scorm.json');
 const fs = require('fs');
 let identifier = scorm.general.course_title.split(" ").map((n)=>n[0]).join("");
 
-
 function generateManifest() {
-    let path = './dist/imsmanifest.xml';
+    let path = './imsmanifest.xml';
     let mfData = '<manifest>\n' + generateMetadata() +'\n' + generateOrganizations() + '\n' + generateResources() + '\n</manifest>';
     fs.writeFile(path, mfData, function (err) {
         if (err) throw err;
@@ -13,11 +12,9 @@ function generateManifest() {
     console.log(mfData);
 }
 
-generateManifest();
-
 function generateMetadata() {
     let path = scorm.general.course_code + '_course.xml';
-    fs.writeFile('./dist/'+ path, generateCourseMetadata(), function (err) {
+    fs.writeFile('./'+ path, generateCourseMetadata(), function (err) {
         if (err) throw err;
         console.log(err);
       });
