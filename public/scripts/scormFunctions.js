@@ -7,13 +7,16 @@ function Initialize() {
    	var entryStatus = retrieveDataValue( "cmi.entry" );
 }
 
-function Commit() {
-
-}
-
 function Terminate() {
-    storeDataValue( "cmi.completion_status", "completed" );
-    storeDataValue( "cmi.exit", "" );
-    
-    terminateCommunication();
+    if (!IntraNavigation) {
+      storeDataValue( "cmi.completion_status", "completed" );
+
+      storeDataValue( "cmi.exit", "" );
+
+      terminateCommunication();
+   }
 }
+
+// Global variables
+var IntraNavigation = false
+
